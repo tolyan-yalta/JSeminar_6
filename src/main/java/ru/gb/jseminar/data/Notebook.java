@@ -6,12 +6,12 @@ public class Notebook {
     Integer id;
     String model;
     String processor;
-    String ram;
-    String hdd;
-    String screenDiagonal;
+    Integer ram;
+    Integer hdd;
+    Double screenDiagonal;
     String operatingSystem;
 
-    public Notebook(Integer i, String m, String p, String r, String h, String s, String o){
+    public Notebook(Integer i, String m, String p, Integer r, Integer h, Double s, String o){
         id = i;
         model = m;
         processor = p;
@@ -39,7 +39,7 @@ public class Notebook {
     @Override
     public String toString(){
         String str;
-        str = "Model: " + model + "\tProcessor: " + processor + "\tRAM: " + ram + "Gb" + "\tHDD: " + hdd + "Gb" + "\tScreen diagonal: " + screenDiagonal + '"' + "\tOperating system: " + operatingSystem;
+        str = "Model: " + model + "\tProcessor: " + processor + "\tRAM: " + ram.toString() + "Gb" + "\tHDD: " + hdd.toString() + "Gb" + "\tScreen diagonal: " + screenDiagonal.toString() + '"' + "\tOperating system: " + operatingSystem;
         return str;
     }
 }
